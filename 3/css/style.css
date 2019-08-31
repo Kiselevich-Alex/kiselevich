@@ -51,6 +51,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: 50px;
 }
 
 .logo a{
@@ -65,7 +66,7 @@ header{
 }
 
 
-.nav ul li a{
+nav ul li a{
 	color: #fff;
 	font-family:'Lato', sans-serif;
 	font-size: 16px;
@@ -74,9 +75,45 @@ header{
 	transition: 0.3s all;
 }
 
-.nav ul li a:hover{
+nav ul li a:hover{
 	color: #ed145b;
 }
+
+.mob_header{
+	display: none;
+	position: absolute;
+    right: 7vw;
+}
+.mob_header button{
+	background-color: #ed145b;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	padding: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.mob_nav{
+	display: none;
+	position: absolute;
+	z-index: 100;
+	
+}
+
+.mob_nav ul li{
+	display: block;
+}
+
+.mob_nav ul{
+		padding: 10px;
+		margin: 0;
+		width: 100px;
+		position: absolute;
+		background-color: rgba(0,0,0,.2);	
+		right: -23px;
+}
+
+
 /*----------------------- first screen -------------------*/
 
 
@@ -732,112 +769,112 @@ footer{
 		width: 740px;
 	}
 	.first_screen h1 {
-	    font-size: 36px;
-	    padding-top: 160px;
+		font-size: 36px;
+		padding-top: 160px;
 	}
 	.first_screen p {
-	    font-size: 19px;
-	    margin-bottom: 60px;
+		font-size: 19px;
+		margin-bottom: 60px;
 	}
 	.first_screen a {
-	    font-size: 13px;
+		font-size: 13px;
 	}
 	section#about {
-	    background: url(../img/bg_ss.jpg) no-repeat 30% top/cover;
+		background: url(../img/bg_ss.jpg) no-repeat 30% top/cover;
 	}
 	.about_info {
-	    width: 50%;
+		width: 50%;
 	}
 	section#Prices {
-	    padding: 40px 0;
+		padding: 40px 0;
 	}
 	.prices {
-	    padding-top: 20px;
+		padding-top: 20px;
 	}
 	.price {
-	    width: 175px;
-	    height: 306px;
+		width: 175px;
+		height: 306px;
 	}
 	.cost h1 {
-	    font-size: 30px;
+		font-size: 30px;
 	}
 	.cost h5 {
-	    font-size: 12px;
+		font-size: 12px;
 	}
 	.inf_tarif p {
-	    font-size: 13px;
+		font-size: 13px;
 	}
 	.cost_info a {
-	    font-size: 13px;
-	    padding: 13px 30px;
+		font-size: 13px;
+		padding: 13px 30px;
 	}
 	.cost_info h3 {
-	    left: calc(50% - 70px);
-	    width: 140px;
-	    font-size: 13px;
+		left: calc(50% - 70px);
+		width: 140px;
+		font-size: 13px;
 	}
 	.cost_info {
-	    height: 215px;
+		height: 215px;
 	}
 	.ad_info {
-	    display: flex;
-	    width: 31%;
+		display: flex;
+		width: 31%;
 	}
 	.Aditional_info {
-	    padding: 30px 0;
+		padding: 30px 0;
 	}
 	.join a {
-	    font-size: 13px;
-	    padding: 12px 52px;
-	    margin-right: 20px;
+		font-size: 13px;
+		padding: 12px 52px;
+		margin-right: 20px;
 	}
 	.join h1 {
-	    font-size: 20px;
+		font-size: 20px;
 	}
 	.join {
-	    padding: 40px 0;
+		padding: 40px 0;
 	}
 	.news_description {
-	    padding: 10px;
+		padding: 10px;
 	}
 
 	.news_img img {
-	    width: 230px;
+		width: 230px;
 	}
 	.news {
-	    width: 230px;
+		width: 230px;
 	}
 	.news_info {
-	    padding-bottom: 30px;
-	    padding-top: 40px;
+		padding-bottom: 30px;
+		padding-top: 40px;
 	}
 	section#Aditioanal_info_2 {
-	    padding: 70px 0;
+		padding: 70px 0;
 	}
 
 	section#Download {
-	    background: url(../img/bg_dwnl.jpg) no-repeat 55% top/cover;
-	    padding: 70px 0;
+		background: url(../img/bg_dwnl.jpg) no-repeat 55% top/cover;
+		padding: 70px 0;
 	}
 	.download {
-	    width: 40%;
-	    padding-left: calc(50% + 30px);
+		width: 40%;
+		padding-left: calc(50% + 30px);
 	}
 	.download h1 {
-	    font-size: 30px;
+		font-size: 30px;
 	}
 	.download p {
-	    font-size: 13px;
+		font-size: 13px;
 	}
 	.download a {
-	    font-size: 12px;
-	    padding: 13px 42px;
+		font-size: 12px;
+		padding: 13px 42px;
 	}
 	.footer h4 {
-	    font-size: 11px;
+		font-size: 11px;
 	}
 	footer {
-	    padding: 20px 0;
+		padding: 20px 0;
 	}
 }
 
@@ -845,11 +882,20 @@ footer{
 	.container{
 		width: 440px;
 	}
+
+	.mob_header{
+		display: block;
+	}
+
+	.header{
+		justify-content: flex-end;
+	}
+
 	.logo{
 		display: none;
 	}
 	.nav {
-	    margin: 0 auto;
+		display: none;
 	}
 	.nav ul li a {
 	    padding: 0 11px;
@@ -1045,149 +1091,149 @@ footer{
 	.container{
 		width: 300px;
 	}
-.nav ul li a {
-    padding: 0 5px;
-    font-size: 12px;
-}
-.first_screen h1 {
-    font-size: 20px;
-    padding-top: 130px;
-    padding-bottom: 20px;
-}
-.first_screen p {
-    font-size: 13px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-.first_screen {
-    height: 480px;
-}
-section#about {
-    background: url(../img/bg_ss.jpg) no-repeat 0% top/cover;
-}
-.about_info {
-    width: 100%;
-  	padding: 30px 0;
-    text-align: center;
-}
-.about_info h1 {
-    font-size: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-.about_info h6 {
-    width: 80px;
-    margin-left: calc(50% - 40px);
-    left: 0px;
-}
-.about_info p {
-    font-size: 12px;
-    width: 100%;
-    margin-top: 20px;
-}
-.serv_info h1 {
-    font-size: 20px;
-}
-.serv_info h6 {
-    width: 80px;
-    left: calc(50% - 40px);
-}
-.serv_info p {
-    font-size: 12px;
-    width: 100%;
-    margin-top: 20px;
-}
-.serv_img {
-    width: 103px;
-    height: 103px;
-}
-.serv_img img {
-    padding: 26px 0;
-}
-.service h4 {
-    font-size: 12px;
-}
-section#Prices {
-    padding: 20px 0;
-}
-.prices_info h1 {
-    font-size: 20px;
-}
-.prices_info h6 {
-    width: 80px;
-    left: calc(50% - 40px);
-}
-.prices_info p {
-    width: 100%;
-    font-size: 12px;
-}
+	.nav ul li a {
+		padding: 0 5px;
+		font-size: 12px;
+	}
+	.first_screen h1 {
+		font-size: 20px;
+		padding-top: 130px;
+		padding-bottom: 20px;
+	}
+	.first_screen p {
+		font-size: 13px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	.first_screen {
+		height: 480px;
+	}
+	section#about {
+		background: url(../img/bg_ss.jpg) no-repeat 0% top/cover;
+	}
+	.about_info {
+		width: 100%;
+		padding: 30px 0;
+		text-align: center;
+	}
+	.about_info h1 {
+		font-size: 20px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.about_info h6 {
+		width: 80px;
+		margin-left: calc(50% - 40px);
+		left: 0px;
+	}
+	.about_info p {
+		font-size: 12px;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.serv_info h1 {
+		font-size: 20px;
+	}
+	.serv_info h6 {
+		width: 80px;
+		left: calc(50% - 40px);
+	}
+	.serv_info p {
+		font-size: 12px;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.serv_img {
+		width: 103px;
+		height: 103px;
+	}
+	.serv_img img {
+		padding: 26px 0;
+	}
+	.service h4 {
+		font-size: 12px;
+	}
+	section#Prices {
+		padding: 20px 0;
+	}
+	.prices_info h1 {
+		font-size: 20px;
+	}
+	.prices_info h6 {
+		width: 80px;
+		left: calc(50% - 40px);
+	}
+	.prices_info p {
+		width: 100%;
+		font-size: 12px;
+	}
 
-.ad_info_inf h3 {
-    font-size: 12px;
-}
-.ad_info_inf p {
-    font-size: 12px;
-    margin: 10px 0;
-}
-.join h1 {
-    font-size: 12px;
-    width: 170px;
-}
-.join a {
-    font-size: 10px;
-    padding: 7px 37px;
-}
-.news_info p {
-    font-size: 12px;
-    width: 100%;
-}
-.news_info h1 {
-    font-size: 20px;
-}
-.news_info h6 {
-    width: 80px;
-    left: calc(50% - 40px);
-}
+	.ad_info_inf h3 {
+		font-size: 12px;
+	}
+	.ad_info_inf p {
+		font-size: 12px;
+		margin: 10px 0;
+	}
+	.join h1 {
+		font-size: 12px;
+		width: 170px;
+	}
+	.join a {
+		font-size: 10px;
+		padding: 7px 37px;
+	}
+	.news_info p {
+		font-size: 12px;
+		width: 100%;
+	}
+	.news_info h1 {
+		font-size: 20px;
+	}
+	.news_info h6 {
+		width: 80px;
+		left: calc(50% - 40px);
+	}
 
-section#Aditioanal_info_2 {
-    padding: 30px 0;
-}
-.ad_info_2 h1 {
-    font-size: 20px;
-}
-.ad_info_2 h6 {
-    width: 80px;
-    left: calc(50% - 40px);
-}
-.ad_info_2 p {
-    font-size: 12px;
-    width: 100%;
-}
-.ad_info_2 a {
-    font-size: 11px;
-    padding: 10px 30px;
-}
-.download {
-    width: 100%;
-}
-.download h1 {
-    font-size: 20px;
-}
-.download h6 {
-    width: 80px;
-    margin-left: calc(50% - 40px);
-}
+	section#Aditioanal_info_2 {
+		padding: 30px 0;
+	}
+	.ad_info_2 h1 {
+		font-size: 20px;
+	}
+	.ad_info_2 h6 {
+		width: 80px;
+		left: calc(50% - 40px);
+	}
+	.ad_info_2 p {
+		font-size: 12px;
+		width: 100%;
+	}
+	.ad_info_2 a {
+		font-size: 11px;
+		padding: 10px 30px;
+	}
+	.download {
+		width: 100%;
+	}
+	.download h1 {
+		font-size: 20px;
+	}
+	.download h6 {
+		width: 80px;
+		margin-left: calc(50% - 40px);
+	}
 
-.download p {
-    font-size: 12px;
-}
-.download a {
-    font-size: 12px;
-    padding: 10px 30px;
-}
-.footer h4 {
-    font-size: 8px;
-}
+	.download p {
+		font-size: 12px;
+	}
+	.download a {
+		font-size: 12px;
+		padding: 10px 30px;
+	}
+	.footer h4 {
+		font-size: 8px;
+	}
 
 }
 
