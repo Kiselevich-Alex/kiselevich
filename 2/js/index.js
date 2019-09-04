@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	new WOW().init();
+	
 	$(".first_screen").on("click","a", function (event) {
 		event.preventDefault();
 
